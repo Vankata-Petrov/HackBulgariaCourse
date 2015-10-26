@@ -40,6 +40,9 @@ int main()
         }
     table.erase(table.begin());
     for(int i=0;i<table.size();i++)
+    {
+        if(table[0].size()!=table[i].size()) {
+                cout<<"Wrong input! The table is not rectangular!"<<endl;return 0;}
         for(int j=0;j<table[i].size();j++)
         {
             if(table[i][j]==word[0]) {
@@ -53,6 +56,7 @@ int main()
                 if(compare(i,j,0,-1,word)) number++;
             }
         }
+    }
     cout<<number<<endl;
     return 0;
 }
